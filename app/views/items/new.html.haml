@@ -1,0 +1,29 @@
+-content_for :content do
+
+  %h1 New Item
+
+  - form_for @item do |f|
+
+    .span-22
+      %fieldset
+        .span-22
+          %h3.subsection Item Info
+    
+        .field-group.span-22
+          = f.label :name, 'Name:', :class => 'span-22'
+          .error-message= f.error_message_on :name
+          = f.text_field :name, :class => 'span-10'
+    
+        .field-group.span-22
+          = f.label :description, 'Description:', :class => 'span-22'
+          .error-message= f.error_message_on :description
+          = f.text_field :description, :class => 'span-10'
+
+        .field-group.span-22
+          = f.label :price, 'Price:', :class => 'span-22'
+          .error-message= f.error_message_on :price
+          = f.text_field :price, :class => 'span-5'
+
+
+    .span-22
+      .submit= submit_tag "Create Item", :class => 'span-5 large button'

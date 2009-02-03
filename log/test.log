@@ -35,3 +35,95 @@ Processing ItemsController#index (for 0.0.0.0 at 2009-02-03 11:37:31) [GET]
   [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM "items" [0m
 Rendering items/index
 Completed in 3ms (View: 0, DB: 0) | 200 OK [http://test.host/items]
+
+
+Processing ItemsController#index (for 0.0.0.0 at 2009-02-03 11:52:09) [GET]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://test.host/items]
+
+
+Processing ItemsController#new (for 0.0.0.0 at 2009-02-03 11:52:09) [GET]
+
+
+Processing ItemsController#index (for 0.0.0.0 at 2009-02-03 11:55:06) [GET]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://test.host/items]
+
+
+Processing ItemsController#new (for 0.0.0.0 at 2009-02-03 11:55:06) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/items/new]
+
+
+Processing ItemsController#create (for 0.0.0.0 at 2009-02-03 11:55:06) [POST]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 52ms (View: 0, DB: 0) | 200 OK [http://test.host/items]
+
+
+Processing ItemsController#create (for 0.0.0.0 at 2009-02-03 11:55:24) [POST]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://test.host/items]
+
+
+Processing ItemsController#create (for 0.0.0.0 at 2009-02-03 11:56:02) [POST]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://test.host/items]
+
+
+Processing ItemsController#create (for 0.0.0.0 at 2009-02-03 11:57:04) [POST]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://test.host/items]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "items" [0m
+
+
+Processing ItemsController#create (for 0.0.0.0 at 2009-02-03 11:58:20) [POST]
+  Parameters: {"name"=>"My item", "price"=>1.5, "description"=>"really cool item"}
+Rendering template within layouts/application
+Rendering items/new
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://test.host/items?description=really+cool+item&name=My+item&price=1.5]
+
+
+Processing ItemsController#create (for 0.0.0.0 at 2009-02-03 11:58:37) [POST]
+  Parameters: {"name"=>"My item", "price"=>1.5, "description"=>"really cool item"}
+Rendering template within layouts/application
+Rendering items/new
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://test.host/items?description=really+cool+item&name=My+item&price=1.5]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "items" [0m
+
+
+Processing ItemsController#create (for 0.0.0.0 at 2009-02-03 11:59:13) [POST]
+  Parameters: {"item"=>{"name"=>"My item", "price"=>1.5, "description"=>"really cool item"}}
+  [4;36;1mItem Create (0.5ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('My item', 1.5, 'really cool item')[0m
+Redirected to http://test.host/items/1
+Completed in 7ms (DB: 0) | 302 Found [http://test.host/items?item%5Bdescription%5D=really+cool+item&item%5Bname%5D=My+item&item%5Bprice%5D=1.5]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "items" [0m
+
+
+Processing ItemsController#create (for 0.0.0.0 at 2009-02-03 11:59:39) [POST]
+  Parameters: {"item"=>{"name"=>"My item", "price"=>1.5, "description"=>"really cool item"}}
+  [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('My item', 1.5, 'really cool item')[0m
+Redirected to http://test.host/items/1
+Completed in 7ms (DB: 0) | 302 Found [http://test.host/items?item%5Bdescription%5D=really+cool+item&item%5Bname%5D=My+item&item%5Bprice%5D=1.5]
+
+
+Processing ItemsController#create (for 0.0.0.0 at 2009-02-03 12:00:05) [POST]
+  Parameters: {"item"=>{"name"=>"My item", "price"=>1.5, "description"=>"really cool item"}}
+  [4;36;1mItem Create (0.5ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('My item', 1.5, 'really cool item')[0m
+Redirected to http://test.host/items/1
+Completed in 7ms (DB: 0) | 302 Found [http://test.host/items?item%5Bdescription%5D=really+cool+item&item%5Bname%5D=My+item&item%5Bprice%5D=1.5]
+
+
+Processing ItemsController#create (for 0.0.0.0 at 2009-02-03 12:00:36) [POST]
+  Parameters: {"item"=>{"name"=>"My item", "price"=>1.5, "description"=>"really cool item"}}
+  [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('My item', 1.5, 'really cool item')[0m
+Redirected to http://test.host/items
+Completed in 7ms (DB: 0) | 302 Found [http://test.host/items?item%5Bdescription%5D=really+cool+item&item%5Bname%5D=My+item&item%5Bprice%5D=1.5]
