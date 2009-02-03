@@ -127,3 +127,19 @@ Processing ItemsController#create (for 0.0.0.0 at 2009-02-03 12:00:36) [POST]
   [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('My item', 1.5, 'really cool item')[0m
 Redirected to http://test.host/items
 Completed in 7ms (DB: 0) | 302 Found [http://test.host/items?item%5Bdescription%5D=really+cool+item&item%5Bname%5D=My+item&item%5Bprice%5D=1.5]
+REQUESTING PAGE: GET /home with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-03 12:12:29) [GET]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-03 12:12:29) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://www.example.com/items/new]
