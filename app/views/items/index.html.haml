@@ -2,17 +2,18 @@
   %h1 Items
   
   .prepend-20.span-3
-    = link_to ("New Item", new_item_url)
+    = link_to("New Item", new_item_url)
     
   .span-21
-    %table
+    %table#items-list
       %tr
         %th Name
         %th Description
         %th Price
-      - for item in @items
-        %tr
-          %td= item.name
-          %td= item.description
-          %td= item.price
+      %tbody  
+        - for item in @items
+          %tr
+            %td= item.name
+            %td= item.description
+            %td= item.price
     
