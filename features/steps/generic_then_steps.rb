@@ -1,5 +1,6 @@
 Then(/^the "(.*)" page should be displayed$/) do |page_name|
   @browser.url.should =~ /\/#{page_name}$/
+  
 end
  
 Then(/^the new "(.*)" page should be displayed$/) do |resource|
