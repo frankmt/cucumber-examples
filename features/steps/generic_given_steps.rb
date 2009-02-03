@@ -4,5 +4,5 @@ Given(/a "(.*)" exists with \{(.*)\}$/) do |entity, fields|
 end
  
 Given(/^I am in the new "(.*)" page$/) do |resource_name|
-  visits "/#{resource_name}/new"
+  @browser.goto(ENV['HOST'] + "/#{resource_name}/new")
 end

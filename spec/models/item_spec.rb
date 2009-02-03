@@ -5,7 +5,7 @@ describe Item do
   it "should validate presence of name" do
     item = Item.new
     item.valid?
-    item.errors.on(:name).should == "can't be blank"
+    item.errors.on(:name).should == "Name can't be blank"
     
     item.name = "name"
     item.valid?
@@ -15,7 +15,7 @@ describe Item do
   it "should validate presence of description" do
     item = Item.new
     item.valid?
-    item.errors.on(:description).should == "can't be blank"
+    item.errors.on(:description).should == "Description can't be blank"
     
     item.description = "description"
     item.valid?
