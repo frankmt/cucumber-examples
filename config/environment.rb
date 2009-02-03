@@ -73,3 +73,5 @@ Rails::Initializer.run do |config|
   # Please note that observers generated using script/generate observer need to have an _observer suffix
   # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
 end
+
+ActionView::Base.field_error_proc = Proc.new {|tag, instance| "<span class=\"field-with-errors\">#{tag}</span>" }

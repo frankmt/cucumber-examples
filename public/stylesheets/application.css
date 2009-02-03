@@ -1,0 +1,45 @@
+html {
+  height: 100%; }
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl, table {
+  font-family: 'Helvetica Neue',Arial,sans-serif;
+  margin-bottom: 20px;
+  text-shadow: 0 0 0 #FFFFFF; }
+  h1 a,   h2 a,   h3 a,   h4 a,   h5 a,   h6 a,   p a,   ul a,   ol a,   dl a,   table a {
+    text-decoration: none; }
+
+.push {
+  height: 31px; }
+
+fieldset {
+  border: none;
+  margin: 2em;
+  padding: 0; }
+
+.field-group {
+  margin: 0.25em; }
+
+.field-with-errors input, .field-with-errors textarea {
+  background: #fbe3e4;
+  color: #8a1f11;
+  border-color: #fbc2c4; }
+
+.submit {
+  margin: 1em 0 1em 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  margin: 2em; }
+  table th {
+    background: #EEEEEE none repeat scroll 0 0;
+    color: #777777; }
+  table tr {
+    border-bottom: 1px solid #EEEEEE;
+    padding: 7px 10px 7px 0; }
+    table tr a {
+      color: #388DBF;
+      text-decoration: none; }
