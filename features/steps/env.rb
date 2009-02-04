@@ -13,9 +13,6 @@ require 'spec/factories'
 include FireWatir
 
 ENV["HOST"] = "http://localhost:3000"
-
-require 'safariwatir'
-Browser = Watir::Safari
  
 # "before all"
 browser = Firefox.new
@@ -23,7 +20,7 @@ browser = Firefox.new
 Before do
   @browser = browser
 end
- 
+
 # "after all"
 at_exit do
   browser.close
