@@ -6,16 +6,16 @@ Cucumber::Rails.use_transactional_fixtures
 
 # Comment out the next line if you're not using RSpec's matchers (should / should_not) in your steps.
 require 'cucumber/rails/rspec'
-require 'firewatir'
 require 'factory_girl'
 require 'spec/factories'
 
-include FireWatir
+require "rubygems"
+require "celerity"
 
 ENV["HOST"] = "http://localhost:3000"
  
 # "before all"
-browser = Firefox.new
+browser = Celerity::Browser.new
  
 Before do
   @browser = browser
