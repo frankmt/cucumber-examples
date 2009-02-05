@@ -10,9 +10,14 @@
         %th Name
         %th Description
         %th Price
+        %th 
       - for item in @items
         %tr
           %td= item.name
           %td= item.description
           %td= item.price
+          %td
+            - form_tag item_path(item), :method => :delete do
+              = image_submit_tag "/images/cancel.png", :alt => "Remove Item", :confirm => "Are you sure?"
+          
     

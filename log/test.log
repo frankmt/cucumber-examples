@@ -127,3 +127,78 @@ Processing ItemsController#create (for 0.0.0.0 at 2009-02-03 12:00:36) [POST]
   [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('My item', 1.5, 'really cool item')[0m
 Redirected to http://test.host/items
 Completed in 7ms (DB: 0) | 302 Found [http://test.host/items?item%5Bdescription%5D=really+cool+item&item%5Bname%5D=My+item&item%5Bprice%5D=1.5]
+  [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('name', 1.54, 'desc')[0m
+
+
+Processing ItemsController#destroy (for 0.0.0.0 at 2009-02-05 11:05:15) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('name', 1.54, 'desc')[0m
+
+
+Processing ItemsController#destroy (for 0.0.0.0 at 2009-02-05 11:05:26) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM "items" WHERE ("items"."id" = 1) [0m
+  [4;36;1mItem Destroy (0.1ms)[0m   [0;1mDELETE FROM "items" WHERE "id" = 1[0m
+Redirected to http://test.host/items
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/items/1]
+  [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('name', 1.54, 'desc')[0m
+
+
+Processing ItemsController#destroy (for 0.0.0.0 at 2009-02-05 11:05:43) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM "items" WHERE ("items"."id" = 1) [0m
+  [4;36;1mItem Destroy (0.1ms)[0m   [0;1mDELETE FROM "items" WHERE "id" = 1[0m
+Redirected to http://test.host/items
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/items/1]
+
+
+Processing ItemsController#index (for 0.0.0.0 at 2009-02-05 11:06:09) [GET]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://test.host/items]
+
+
+Processing ItemsController#new (for 0.0.0.0 at 2009-02-05 11:06:09) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 46ms (View: 44, DB: 0) | 200 OK [http://test.host/items/new]
+
+
+Processing ItemsController#create (for 0.0.0.0 at 2009-02-05 11:06:09) [POST]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 6ms (View: 0, DB: 0) | 200 OK [http://test.host/items]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "items" [0m
+
+
+Processing ItemsController#create (for 0.0.0.0 at 2009-02-05 11:06:09) [POST]
+  Parameters: {"item"=>{"name"=>"My item", "price"=>1.5, "description"=>"really cool item"}}
+  [4;36;1mItem Create (0.6ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('My item', 1.5, 'really cool item')[0m
+Redirected to http://test.host/items
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/items?item%5Bdescription%5D=really+cool+item&item%5Bname%5D=My+item&item%5Bprice%5D=1.5]
+
+
+Processing ItemsController#create (for 0.0.0.0 at 2009-02-05 11:06:09) [POST]
+  Parameters: {"item"=>{"name"=>"My item", "price"=>1.5, "description"=>"really cool item"}}
+  [4;35;1mItem Create (0.4ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('My item', 1.5, 'really cool item')[0m
+Redirected to http://test.host/items
+Completed in 3ms (DB: 0) | 302 Found [http://test.host/items?item%5Bdescription%5D=really+cool+item&item%5Bname%5D=My+item&item%5Bprice%5D=1.5]
+  [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('name', 1.54, 'desc')[0m
+
+
+Processing ItemsController#destroy (for 0.0.0.0 at 2009-02-05 11:06:09) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM "items" WHERE ("items"."id" = 1) [0m
+  [4;36;1mItem Destroy (0.1ms)[0m   [0;1mDELETE FROM "items" WHERE "id" = 1[0m
+Redirected to http://test.host/items
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/items/1]
+  [4;35;1mItem Create (0.6ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('name', 1.54, 'desc')[0m
+
+
+Processing ItemsController#destroy (for 0.0.0.0 at 2009-02-05 11:06:09) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM "items" WHERE ("items"."id" = 1) [0m
+  [4;35;1mItem Destroy (0.1ms)[0m   [0mDELETE FROM "items" WHERE "id" = 1[0m
+Redirected to http://test.host/items
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/items/1]
