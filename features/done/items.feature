@@ -28,3 +28,9 @@ Scenario: Items are correctly displayed in the home page
   | Name            | Description           | Price |
   | my item         | my description        | 1.5   |
   | my second item  | my second description | 3.0   |
+
+Scenario: Delete an item
+  Given I cannot test this with webrat
+
+Scenario: Delete an item but cancel on confirmation
+  Given I cannot test this with webrat
