@@ -31,4 +31,23 @@ describe ItemsController do
 
   end
   
+  
+  describe "destroy" do
+    
+    before(:each) do
+      @item = Factory :item
+    end
+
+    it "should flash message on success" do
+      response = delete :destroy, :id => @item.id
+      response.flash[:notice].should == "Item successfully destroyed"
+    end
+    
+    it "should redirect to index on success" do
+      response = delete :destroy, :id => @item.id
+      response.should redirect_to(items_url)
+    end
+
+  end
+  
 end

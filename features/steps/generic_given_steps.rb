@@ -1,10 +1,10 @@
 Given(/an item exists with \{(.*)\}$/) do |fields|
-  @browser.goto(ENV['HOST'] + "/items/new")
   fields = instance_eval("{#{fields}}").with_indifferent_access
-  fields.each do |label, value|
-    @browser.text_field('name', "item[#{label}]").set(value)
+  parameters = ""
+  fields.each_key do |key|
+    parameters  = parameters << key.to_s << "=" << fields[key].to_s << "&"
   end
-  @browser.button(:value, "Create Item").click
+  @browser.goto(ENV['HOST'] + "/factories/create_item?#{parameters}")
 end
  
 Given(/^I am in the new "(.*)" page$/) do |resource_name|

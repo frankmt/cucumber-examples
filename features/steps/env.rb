@@ -19,6 +19,7 @@ browser = Firefox.new
  
 Before do
   @browser = browser
+  @browser.goto(ENV['HOST'] + "/factories/destroy_all")
 end
 
 # "after all"
