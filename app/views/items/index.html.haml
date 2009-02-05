@@ -19,5 +19,5 @@
             %td= item.price
             %td
               - form_tag item_path(item), :method => :delete do
-                = image_submit_tag "/images/cancel.png", :alt => "Remove Item", :confirm => "Are you sure?"
+                = image_submit_tag "/images/cancel.png", :alt => "Remove Item", :confirm => "Are you sure?", :value => "remove_item"
     
