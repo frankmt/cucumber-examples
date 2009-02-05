@@ -37,6 +37,7 @@ Scenario: Delete an item
   Then the "items-list" should look like
   | Name            | Description           | Price |
   
+  
 Scenario: Delete an item but cancel on confirmation
   Given an item exists with {'name' => 'my item', 'description' => 'my description', 'price' => '1.5'}
   When I navigate to the home page
