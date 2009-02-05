@@ -1,7 +1,2 @@
-== Cucumber Examples - Webrat
+== Cucumber Examples
 
-You need to start the server in the test environment to run the features
-
-default:  spec/features
-spec:     rake spec
-features: rake features
