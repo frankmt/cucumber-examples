@@ -9,20 +9,46 @@ require 'cucumber/rails/rspec'
 require 'factory_girl'
 require 'spec/factories'
 
-require "rubygems"
-require "celerity"
+require File.join(File.dirname(__FILE__), "support/selenium")
+require File.join(File.dirname(__FILE__), "/../../lib/selenium_server")
+require File.join(File.dirname(__FILE__), "support/selenium_driver_extensions")
 
-ENV["HOST"] = "http://localhost:3000"
+
+# RailsServer.start
+SeleniumServer.start
+
+remote_control_server = ENV['SELENIUM_REMOTE_CONTROL'] || "localhost"
+port = ENV['SELENIUM_PORT'] || 4444
+browser = ENV['SELENIUM_BROWSER'] || "*firefox"
+application_host = ENV['SELENIUM_APPLICATION_HOST'] || "localhost"
+application_port = ENV['SELENIUM_APPLICATION_PORT'] || "3001"
+timeout = 60000
+puts "Contacting Selenium RC on #{remote_control_server}:#{port} -> http://#{application_host}:#{application_port}"
+$selenium = Selenium::SeleniumDriver.new(remote_control_server, port, browser, "http://#{application_host}:#{application_port}", timeout)
+$selenium.extend SeleniumDriverExtensions
+$selenium.start
+
+ENV["HOST"] = "http://#{application_host}:#{application_port}"
  
-# "before all"
-browser = Celerity::Browser.new
- 
+# Spec::Runner.configure do |config|
+#   config.before :all do
+#     $selenium.open(ENV["HOST"] + "/factories/destroy_all")
+#     @start_time = Time.now.to_f
+#   end
+#   
+#   config.after :all do
+#     puts "Finished in #{Time.now.to_f - @start_time} seconds"
+#   end  
+#   
+# end
+
 Before do
-  @browser = browser
-  @browser.goto(ENV['HOST'] + "/factories/destroy_all")
+  $selenium.open(ENV['HOST'] + "/factories/destroy_all")
 end
 
-# "after all"
 at_exit do
-  browser.close
+  $selenium.stop
+  
+  SeleniumServer.stop
+  # RailsServer.stop
 end

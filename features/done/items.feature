@@ -19,7 +19,7 @@ Scenario: Create an item
   When I press "Create Item"
   Then the "items" page should be displayed
   And I should see "Item successfully created"
-  
+   
 Scenario: Items are correctly displayed in the home page
   Given an item exists with {'name' => 'my item', 'description' => 'my description', 'price' => '1.5'}
   And an item exists with {'name' => 'my second item', 'description' => 'my second description', 'price' => '3.0'}
@@ -32,17 +32,14 @@ Scenario: Items are correctly displayed in the home page
 Scenario: Delete an item
   Given an item exists with {'name' => 'my item', 'description' => 'my description', 'price' => '1.5'}
   When I navigate to the home page
-  And I press "remove_item" expecting a confirmation message
-  And I confirm my option
+  And I press "remove_item" and confirm my option
   Then the "items-list" should look like
   | Name            | Description           | Price |
-  
-  
+
 Scenario: Delete an item but cancel on confirmation
   Given an item exists with {'name' => 'my item', 'description' => 'my description', 'price' => '1.5'}
   When I navigate to the home page
-  And I press "remove_item" expecting a confirmation message
-  And I don't confirm my option
+  And I press "remove_item" and do not confirm my option
   Then the "items-list" should look like
   | Name            | Description           | Price |
   | my item         | my description        | 1.5   |

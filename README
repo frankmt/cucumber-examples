@@ -1,6 +1,7 @@
-== Cucumber Examples - Celerity
+== Cucumber Examples - Selenium
 
 You need to start the server in the test environment to run the features
+./script/server -e test -p 3001
 
 default:  spec/features
 spec:     rake spec
