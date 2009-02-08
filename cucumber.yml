@@ -1,0 +1,5 @@
+webrat: --require features/steps/ --require features/support/webrat_env.rb --format progress 
+selenium: --require features/steps/common --require features/support/selenium_env.rb --format progress 
+
+# webrat: --require features/steps/common --require features/support/webrat_env.rb --exclude selenium.feature --format progress
+# selenium: --require features/steps/common --require features/support/selenium_env.rb --exclude webrat.feature --format progress

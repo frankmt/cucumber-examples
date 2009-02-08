@@ -1689,3 +1689,45 @@ Processing ItemsController#index (for 127.0.0.1 at 2009-02-05 14:58:52) [GET]
 Rendering template within layouts/application
 Rendering items/index
 Completed in 8ms (View: 7, DB: 1) | 200 OK [http://www.example.com/items]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mDELETE FROM items[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mDELETE FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mDELETE FROM items[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mDELETE FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mDELETE FROM items[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mDELETE FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mDELETE FROM items[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mDELETE FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mDELETE FROM items[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mDELETE FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mDELETE FROM items[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mDELETE FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mDELETE FROM items[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mDELETE FROM schema_migrations[0m
