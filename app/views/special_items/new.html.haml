@@ -19,10 +19,10 @@
           .error-message= f.error_message_on :category
           = f.select :category_id, Category.all.collect {|cat| [cat.name, cat.id]}, :class => 'span-3'
 
-        .field-group.span-22
+        #subcategories-select.field-group.span-22
           = f.label :subcategory, 'Subcategory:', :class => 'span-22'
           .error-message= f.error_message_on :subcategory
-          = f.select :subcategory_id, Subcategory.all.collect {|cat| [cat.name, cat.id]}, :class => 'span-3'
+          = f.select :subcategory_id, Subcategory.all.collect {|cat| [cat.name, cat.id]}, :id => 'subcategories-select', :class => 'span-3', :prompt => "Select Subcategory"
 
         .field-group.span-22
           = f.label :price, 'Price:', :class => 'span-22'
@@ -32,3 +32,7 @@
 
     .span-22
       .submit= submit_tag "Create Special Item", :class => 'span-5 large button'
+
+
+-content_for :javascript do
+  CucumberExamples.specialItemsPage.setupComboBoxes();

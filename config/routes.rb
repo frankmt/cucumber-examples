@@ -3,4 +3,6 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :items
   map.resources :special_items
+  
+  map.connect ':controller/:action/:id'
 end
