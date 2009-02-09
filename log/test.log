@@ -308,3 +308,19 @@ Migrating to AddSpecialItemsTable (20090209104833)
   [4;35;1mSubcategory Create (0.1ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
   [4;36;1mSubcategory Exists (0.2ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
   [4;35;1mSubcategory Exists (0.1ms)[0m   [0mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'new name') LIMIT 1[0m
+  [4;36;1mCategory Exists (0.2ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mCategory Exists (0.1ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mCategory Exists (0.3ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mCategory Exists (0.3ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Exists (0.2ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Create (0.1ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
+  [4;36;1mCategory Exists (0.2ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mCategory Exists (1.2ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Exists (0.1ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Create (0.1ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
