@@ -202,3 +202,109 @@ Processing ItemsController#destroy (for 0.0.0.0 at 2009-02-05 11:06:09) [DELETE]
   [4;35;1mItem Destroy (0.1ms)[0m   [0mDELETE FROM "items" WHERE "id" = 1[0m
 Redirected to http://test.host/items
 Completed in 3ms (DB: 1) | 302 Found [http://test.host/items/1]
+  [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('name', 1.54, 'desc')[0m
+
+
+Processing ItemsController#destroy (for 0.0.0.0 at 2009-02-09 10:40:11) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM "items" WHERE ("items"."id" = 1) [0m
+  [4;36;1mItem Destroy (0.1ms)[0m   [0;1mDELETE FROM "items" WHERE "id" = 1[0m
+Redirected to http://test.host/items
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/items/1]
+  [4;35;1mItem Create (0.3ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('name', 1.54, 'desc')[0m
+
+
+Processing ItemsController#destroy (for 0.0.0.0 at 2009-02-09 10:40:11) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM "items" WHERE ("items"."id" = 1) [0m
+  [4;35;1mItem Destroy (0.1ms)[0m   [0mDELETE FROM "items" WHERE "id" = 1[0m
+Redirected to http://test.host/items
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/items/1]
+
+
+Processing ItemsController#create (for 0.0.0.0 at 2009-02-09 10:40:11) [POST]
+  Parameters: {"item"=>{"name"=>"My item", "price"=>1.5, "description"=>"really cool item"}}
+  [4;36;1mItem Create (0.6ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('My item', 1.5, 'really cool item')[0m
+Redirected to http://test.host/items
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/items?item%5Bdescription%5D=really+cool+item&item%5Bname%5D=My+item&item%5Bprice%5D=1.5]
+
+
+Processing ItemsController#create (for 0.0.0.0 at 2009-02-09 10:40:11) [POST]
+  Parameters: {"item"=>{"name"=>"My item", "price"=>1.5, "description"=>"really cool item"}}
+  [4;35;1mItem Create (0.4ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('My item', 1.5, 'really cool item')[0m
+Redirected to http://test.host/items
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/items?item%5Bdescription%5D=really+cool+item&item%5Bname%5D=My+item&item%5Bprice%5D=1.5]
+
+
+Processing ItemsController#create (for 0.0.0.0 at 2009-02-09 10:40:12) [POST]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 72ms (View: 1, DB: 0) | 200 OK [http://test.host/items]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "items" [0m
+
+
+Processing ItemsController#new (for 0.0.0.0 at 2009-02-09 10:40:12) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/items/new]
+
+
+Processing ItemsController#index (for 0.0.0.0 at 2009-02-09 10:40:12) [GET]
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddItemsTable (20090203111859)
+Migrating to AddCategoriesTable (20090209104816)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255)) [0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090209104816')[0m
+Migrating to AddSubcategoriesTable (20090209104822)
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE TABLE "subcategories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "category_id" integer, "name" varchar(255)) [0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090209104822')[0m
+Migrating to AddSpecialItemsTable (20090209104833)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "special_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "category_id" integer, "subcategory_id" integer, "name" varchar(255), "price" float) [0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090209104833')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("items")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("special_items")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("subcategories")[0m
+  [4;36;1mCategory Create (0.5ms)[0m   [0;1mINSERT INTO "categories" ("name") VALUES('category 74')[0m
+  [4;36;1mCategory Create (0.4ms)[0m   [0;1mINSERT INTO "categories" ("name") VALUES('category 98')[0m
+  [4;36;1mCategory Create (0.4ms)[0m   [0;1mINSERT INTO "categories" ("name") VALUES('category 52')[0m
+  [4;36;1mCategory Create (0.4ms)[0m   [0;1mINSERT INTO "categories" ("name") VALUES('category 86')[0m
+  [4;36;1mCategory Create (0.4ms)[0m   [0;1mINSERT INTO "categories" ("name") VALUES('category 43')[0m
+  [4;36;1mCategory Create (0.4ms)[0m   [0;1mINSERT INTO "categories" ("name") VALUES('category 28')[0m
+  [4;36;1mCategory Create (0.4ms)[0m   [0;1mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mCategory Exists (0.1ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mCategory Exists (0.1ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;36;1mCategory Exists (0.1ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.3ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mCategory Exists (0.1ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Exists (0.1ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'new name') LIMIT 1[0m
+  [4;36;1mCategory Exists (0.1ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mCategory Exists (0.1ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Create (0.2ms)[0m   [0;1mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
+  [4;36;1mCategory Exists (0.1ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Exists (0.2ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Create (0.1ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
+  [4;36;1mSubcategory Exists (0.2ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Exists (0.1ms)[0m   [0mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'new name') LIMIT 1[0m
