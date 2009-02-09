@@ -41,6 +41,21 @@ describe SpecialItem do
     item.errors.on(:subcategory).should be_nil
     
   end
+  
+  it "should validate that the subcategory belongs to the category" do
+
+    subcategory1 = Factory :subcategory
+    subcategory2 = Factory :subcategory
+
+    item = SpecialItem.new(:subcategory => subcategory1, :category => subcategory2.category)
+    item.should_not be_valid
+    item.errors.on(:subcategory).should == "has to belong to the specified category"
+    
+    item = SpecialItem.new(:subcategory => subcategory1, :category => subcategory1.category)
+    item.valid?
+    item.errors.on(:subcategory).should be_nil
+    
+  end
 
   
 end

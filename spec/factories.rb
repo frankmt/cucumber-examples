@@ -1,5 +1,10 @@
 require 'factory_girl'
 
+Factory.sequence :category_name do |n|
+  "category #{rand(100000)}" 
+end
+
+
 Factory.define :item do |f|
   f.name "name"
   f.description "desc"
@@ -7,12 +12,12 @@ Factory.define :item do |f|
 end
 
 Factory.define :category do |f|
-  f.name "category 1"
+  f.name {Factory.next(:category_name)}
 end
 
 Factory.define :subcategory do |f|
   f.category {|a| a.association(:category) }
-  f.name "category 1"
+  f.name {Factory.next(:category_name)}
 end
 
 Factory.define :special_item do |f|
