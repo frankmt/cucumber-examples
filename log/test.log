@@ -324,3 +324,331 @@ Migrating to AddSpecialItemsTable (20090209104833)
   [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
   [4;36;1mSubcategory Exists (0.1ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
   [4;35;1mSubcategory Create (0.1ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
+
+
+Processing SpecialItemsController#index (for 0.0.0.0 at 2009-02-09 11:39:18) [GET]
+  [4;36;1mSpecialItem Load (0.4ms)[0m   [0;1mSELECT * FROM "special_items" [0m
+Rendering template within layouts/application
+Rendering special_items/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/special_items]
+
+
+Processing SpecialItemsController#new (for 0.0.0.0 at 2009-02-09 11:39:23) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/special_items/new]
+
+
+Processing SpecialItemsController#create (for 0.0.0.0 at 2009-02-09 11:39:35) [POST]
+Rendering template within layouts/application
+Rendering special_items/new
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://test.host/special_items]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "special_items" [0m
+  [4;36;1mCategory Exists (0.1ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Exists (0.1ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Create (0.1ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
+
+
+Processing SpecialItemsController#create (for 0.0.0.0 at 2009-02-09 11:41:07) [POST]
+Rendering template within layouts/application
+Rendering special_items/new
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://test.host/special_items]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "special_items" [0m
+  [4;36;1mCategory Exists (0.1ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Exists (0.1ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Create (0.1ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
+
+
+Processing SpecialItemsController#create (for 0.0.0.0 at 2009-02-09 11:41:12) [POST]
+  Parameters: {"item"=>{"name"=>"My item", "subcategory"=>#<Subcategory id: 1, category_id: 7, name: "category 1">, "category"=>#<Category id: 7, name: "category 1">}}
+Rendering template within layouts/application
+Rendering special_items/new
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://test.host/special_items?item%5Bcategory%5D=7&item%5Bname%5D=My+item&item%5Bsubcategory%5D=1]
+  [4;36;1mCategory Exists (0.1ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Exists (0.1ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Create (0.1ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
+
+
+Processing SpecialItemsController#create (for 0.0.0.0 at 2009-02-09 11:42:03) [POST]
+  Parameters: {"item"=>{"name"=>"My item", "subcategory"=>#<Subcategory id: 1, category_id: 7, name: "category 1">, "category"=>#<Category id: 7, name: "category 1">}}
+Rendering template within layouts/application
+Rendering special_items/new
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://test.host/special_items?item%5Bcategory%5D=7&item%5Bname%5D=My+item&item%5Bsubcategory%5D=1]
+  [4;36;1mCategory Exists (0.1ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Exists (0.1ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Create (0.2ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
+
+
+Processing SpecialItemsController#create (for 0.0.0.0 at 2009-02-09 11:42:37) [POST]
+  Parameters: {"special_item"=>{"name"=>"My item", "subcategory"=>#<Subcategory id: 1, category_id: 7, name: "category 1">, "category"=>#<Category id: 7, name: "category 1">}}
+  [4;36;1mSpecialItem Create (0.2ms)[0m   [0;1mINSERT INTO "special_items" ("name", "price", "category_id", "subcategory_id") VALUES('My item', NULL, 7, 1)[0m
+Redirected to http://test.host/special_items
+Completed in 6ms (DB: 1) | 302 Found [http://test.host/special_items?special_item%5Bcategory%5D=7&special_item%5Bname%5D=My+item&special_item%5Bsubcategory%5D=1]
+  [4;36;1mCategory Exists (0.1ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Exists (0.1ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Create (0.1ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
+
+
+Processing SpecialItemsController#create (for 0.0.0.0 at 2009-02-09 11:42:41) [POST]
+  Parameters: {"special_item"=>{"name"=>"My item", "subcategory"=>#<Subcategory id: 1, category_id: 7, name: "category 1">, "category"=>#<Category id: 7, name: "category 1">}}
+  [4;36;1mSpecialItem Create (0.3ms)[0m   [0;1mINSERT INTO "special_items" ("name", "price", "category_id", "subcategory_id") VALUES('My item', NULL, 7, 1)[0m
+Redirected to http://test.host/special_items
+Completed in 7ms (DB: 1) | 302 Found [http://test.host/special_items?special_item%5Bcategory%5D=7&special_item%5Bname%5D=My+item&special_item%5Bsubcategory%5D=1]
+  [4;36;1mCategory Exists (0.1ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.5ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Exists (0.1ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Create (0.1ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
+  [4;36;1mCategory Exists (0.2ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;36;1mCategory Exists (0.1ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.8ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Exists (0.1ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Create (0.1ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
+  [4;36;1mCategory Exists (0.2ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;36;1mCategory Exists (0.1ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Exists (0.1ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Create (0.1ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
+  [4;36;1mCategory Exists (0.2ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;36;1mCategory Exists (0.1ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Exists (0.1ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Create (0.1ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
+  [4;36;1mSpecialItem Create (0.2ms)[0m   [0;1mINSERT INTO "special_items" ("name", "price", "category_id", "subcategory_id") VALUES('item_69', 2.0, 7, 1)[0m
+
+
+Processing SpecialItemsController#destroy (for 0.0.0.0 at 2009-02-09 11:45:28) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSpecialItem Load (0.3ms)[0m   [0mSELECT * FROM "special_items" WHERE ("special_items"."id" = 1) [0m
+  [4;36;1mSpecialItem Destroy (0.1ms)[0m   [0;1mDELETE FROM "special_items" WHERE "id" = 1[0m
+Redirected to http://test.host/special_items
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/special_items/1]
+  [4;36;1mCategory Exists (0.1ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Exists (0.1ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Create (0.1ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
+  [4;36;1mSpecialItem Create (0.1ms)[0m   [0;1mINSERT INTO "special_items" ("name", "price", "category_id", "subcategory_id") VALUES('item_8', 2.0, 7, 1)[0m
+
+
+Processing SpecialItemsController#destroy (for 0.0.0.0 at 2009-02-09 11:45:32) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSpecialItem Load (0.3ms)[0m   [0mSELECT * FROM "special_items" WHERE ("special_items"."id" = 1) [0m
+  [4;36;1mSpecialItem Destroy (0.1ms)[0m   [0;1mDELETE FROM "special_items" WHERE "id" = 1[0m
+Redirected to http://test.host/special_items
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/special_items/1]
+
+
+Processing SpecialItemsController#index (for 0.0.0.0 at 2009-02-09 11:45:35) [GET]
+  [4;36;1mSpecialItem Load (0.4ms)[0m   [0;1mSELECT * FROM "special_items" [0m
+Rendering template within layouts/application
+Rendering special_items/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://test.host/special_items]
+
+
+Processing SpecialItemsController#new (for 0.0.0.0 at 2009-02-09 11:45:35) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/special_items/new]
+  [4;35;1mCategory Exists (0.2ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;36;1mCategory Create (0.4ms)[0m   [0;1mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;35;1mSubcategory Exists (0.1ms)[0m   [0mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;36;1mSubcategory Create (0.1ms)[0m   [0;1mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
+
+
+Processing SpecialItemsController#create (for 0.0.0.0 at 2009-02-09 11:45:35) [POST]
+Rendering template within layouts/application
+Rendering special_items/new
+Completed in 7ms (View: 0, DB: 1) | 200 OK [http://test.host/special_items]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "special_items" [0m
+  [4;36;1mCategory Exists (0.2ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.6ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Exists (0.1ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Create (0.2ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
+
+
+Processing SpecialItemsController#create (for 0.0.0.0 at 2009-02-09 11:45:35) [POST]
+  Parameters: {"special_item"=>{"name"=>"My item", "subcategory"=>#<Subcategory id: 1, category_id: 7, name: "category 1">, "category"=>#<Category id: 7, name: "category 1">}}
+  [4;36;1mSpecialItem Create (0.1ms)[0m   [0;1mINSERT INTO "special_items" ("name", "price", "category_id", "subcategory_id") VALUES('My item', NULL, 7, 1)[0m
+Redirected to http://test.host/special_items
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/special_items?special_item%5Bcategory%5D=7&special_item%5Bname%5D=My+item&special_item%5Bsubcategory%5D=1]
+  [4;35;1mCategory Exists (0.3ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;36;1mCategory Create (0.4ms)[0m   [0;1mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;35;1mSubcategory Exists (0.2ms)[0m   [0mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;36;1mSubcategory Create (0.1ms)[0m   [0;1mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
+
+
+Processing SpecialItemsController#create (for 0.0.0.0 at 2009-02-09 11:45:35) [POST]
+  Parameters: {"special_item"=>{"name"=>"My item", "subcategory"=>#<Subcategory id: 1, category_id: 7, name: "category 1">, "category"=>#<Category id: 7, name: "category 1">}}
+  [4;35;1mSpecialItem Create (0.2ms)[0m   [0mINSERT INTO "special_items" ("name", "price", "category_id", "subcategory_id") VALUES('My item', NULL, 7, 1)[0m
+Redirected to http://test.host/special_items
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/special_items?special_item%5Bcategory%5D=7&special_item%5Bname%5D=My+item&special_item%5Bsubcategory%5D=1]
+  [4;36;1mCategory Exists (0.2ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.3ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Exists (0.1ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Create (0.2ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
+  [4;36;1mSpecialItem Create (0.1ms)[0m   [0;1mINSERT INTO "special_items" ("name", "price", "category_id", "subcategory_id") VALUES('item_43', 2.0, 7, 1)[0m
+
+
+Processing SpecialItemsController#destroy (for 0.0.0.0 at 2009-02-09 11:45:35) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSpecialItem Load (0.3ms)[0m   [0mSELECT * FROM "special_items" WHERE ("special_items"."id" = 1) [0m
+  [4;36;1mSpecialItem Destroy (0.1ms)[0m   [0;1mDELETE FROM "special_items" WHERE "id" = 1[0m
+Redirected to http://test.host/special_items
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/special_items/1]
+  [4;35;1mCategory Exists (0.2ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;36;1mCategory Create (0.3ms)[0m   [0;1mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;35;1mSubcategory Exists (0.1ms)[0m   [0mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;36;1mSubcategory Create (0.1ms)[0m   [0;1mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 7)[0m
+  [4;35;1mSpecialItem Create (0.1ms)[0m   [0mINSERT INTO "special_items" ("name", "price", "category_id", "subcategory_id") VALUES('item_29', 2.0, 7, 1)[0m
+
+
+Processing SpecialItemsController#destroy (for 0.0.0.0 at 2009-02-09 11:45:35) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSpecialItem Load (0.2ms)[0m   [0;1mSELECT * FROM "special_items" WHERE ("special_items"."id" = 1) [0m
+  [4;35;1mSpecialItem Destroy (0.1ms)[0m   [0mDELETE FROM "special_items" WHERE "id" = 1[0m
+Redirected to http://test.host/special_items
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/special_items/1]
+  [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('name', 1.54, 'desc')[0m
+
+
+Processing ItemsController#destroy (for 0.0.0.0 at 2009-02-09 12:00:22) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM "items" WHERE ("items"."id" = 1) [0m
+  [4;36;1mItem Destroy (0.1ms)[0m   [0;1mDELETE FROM "items" WHERE "id" = 1[0m
+Redirected to http://test.host/items
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/items/1]
+  [4;35;1mItem Create (0.3ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('name', 1.54, 'desc')[0m
+
+
+Processing ItemsController#destroy (for 0.0.0.0 at 2009-02-09 12:00:22) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM "items" WHERE ("items"."id" = 1) [0m
+  [4;35;1mItem Destroy (0.1ms)[0m   [0mDELETE FROM "items" WHERE "id" = 1[0m
+Redirected to http://test.host/items
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/items/1]
+
+
+Processing ItemsController#create (for 0.0.0.0 at 2009-02-09 12:00:22) [POST]
+  Parameters: {"item"=>{"name"=>"My item", "price"=>1.5, "description"=>"really cool item"}}
+  [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('My item', 1.5, 'really cool item')[0m
+Redirected to http://test.host/items
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/items?item%5Bdescription%5D=really+cool+item&item%5Bname%5D=My+item&item%5Bprice%5D=1.5]
+
+
+Processing ItemsController#create (for 0.0.0.0 at 2009-02-09 12:00:22) [POST]
+  Parameters: {"item"=>{"name"=>"My item", "price"=>1.5, "description"=>"really cool item"}}
+  [4;35;1mItem Create (0.5ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('My item', 1.5, 'really cool item')[0m
+Redirected to http://test.host/items
+Completed in 3ms (DB: 0) | 302 Found [http://test.host/items?item%5Bdescription%5D=really+cool+item&item%5Bname%5D=My+item&item%5Bprice%5D=1.5]
+
+
+Processing ItemsController#create (for 0.0.0.0 at 2009-02-09 12:00:22) [POST]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://test.host/items]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "items" [0m
+
+
+Processing ItemsController#new (for 0.0.0.0 at 2009-02-09 12:00:22) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/items/new]
+
+
+Processing ItemsController#index (for 0.0.0.0 at 2009-02-09 12:00:22) [GET]
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/items]
+  [4;36;1mCategory Exists (0.2ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.3ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mCategory Exists (0.2ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Exists (0.1ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'new name') LIMIT 1[0m
+  [4;36;1mCategory Exists (0.2ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Exists (0.1ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Create (0.3ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 1)[0m
+  [4;36;1mSubcategory Exists (0.2ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Exists (0.1ms)[0m   [0mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'new name') LIMIT 1[0m
+  [4;36;1mCategory Exists (0.2ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.3ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Exists (0.1ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Create (0.1ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 1)[0m
+  [4;36;1mCategory Exists (0.2ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.3ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mCategory Exists (0.2ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.3ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Exists (0.1ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Create (0.1ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 1)[0m
+  [4;36;1mSpecialItem Create (0.1ms)[0m   [0;1mINSERT INTO "special_items" ("name", "price", "category_id", "subcategory_id") VALUES('item_18', 2.0, 1, 1)[0m
+
+
+Processing SpecialItemsController#destroy (for 0.0.0.0 at 2009-02-09 12:00:22) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSpecialItem Load (0.3ms)[0m   [0mSELECT * FROM "special_items" WHERE ("special_items"."id" = 1) [0m
+  [4;36;1mSpecialItem Destroy (0.1ms)[0m   [0;1mDELETE FROM "special_items" WHERE "id" = 1[0m
+Redirected to http://test.host/special_items
+Completed in 3ms (DB: 4) | 302 Found [http://test.host/special_items/1]
+  [4;35;1mCategory Exists (0.2ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;36;1mCategory Create (0.3ms)[0m   [0;1mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;35;1mSubcategory Exists (0.1ms)[0m   [0mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;36;1mSubcategory Create (0.1ms)[0m   [0;1mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 1)[0m
+  [4;35;1mSpecialItem Create (0.1ms)[0m   [0mINSERT INTO "special_items" ("name", "price", "category_id", "subcategory_id") VALUES('item_27', 2.0, 1, 1)[0m
+
+
+Processing SpecialItemsController#destroy (for 0.0.0.0 at 2009-02-09 12:00:22) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSpecialItem Load (0.2ms)[0m   [0;1mSELECT * FROM "special_items" WHERE ("special_items"."id" = 1) [0m
+  [4;35;1mSpecialItem Destroy (0.1ms)[0m   [0mDELETE FROM "special_items" WHERE "id" = 1[0m
+Redirected to http://test.host/special_items
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/special_items/1]
+  [4;36;1mCategory Exists (0.2ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.3ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Exists (0.1ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Create (0.1ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 1)[0m
+
+
+Processing SpecialItemsController#create (for 0.0.0.0 at 2009-02-09 12:00:22) [POST]
+  Parameters: {"special_item"=>{"name"=>"My item", "subcategory"=>#<Subcategory id: 1, category_id: 1, name: "category 1">, "category"=>#<Category id: 1, name: "category 1">}}
+  [4;36;1mSpecialItem Create (0.1ms)[0m   [0;1mINSERT INTO "special_items" ("name", "price", "category_id", "subcategory_id") VALUES('My item', NULL, 1, 1)[0m
+Redirected to http://test.host/special_items
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/special_items?special_item%5Bcategory%5D=1&special_item%5Bname%5D=My+item&special_item%5Bsubcategory%5D=1]
+  [4;35;1mCategory Exists (0.2ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;36;1mCategory Create (0.4ms)[0m   [0;1mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;35;1mSubcategory Exists (0.1ms)[0m   [0mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;36;1mSubcategory Create (0.1ms)[0m   [0;1mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 1)[0m
+
+
+Processing SpecialItemsController#create (for 0.0.0.0 at 2009-02-09 12:00:22) [POST]
+  Parameters: {"special_item"=>{"name"=>"My item", "subcategory"=>#<Subcategory id: 1, category_id: 1, name: "category 1">, "category"=>#<Category id: 1, name: "category 1">}}
+  [4;35;1mSpecialItem Create (0.2ms)[0m   [0mINSERT INTO "special_items" ("name", "price", "category_id", "subcategory_id") VALUES('My item', NULL, 1, 1)[0m
+Redirected to http://test.host/special_items
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/special_items?special_item%5Bcategory%5D=1&special_item%5Bname%5D=My+item&special_item%5Bsubcategory%5D=1]
+  [4;36;1mCategory Exists (0.3ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.4ms)[0m   [0mINSERT INTO "categories" ("name") VALUES('category 1')[0m
+  [4;36;1mSubcategory Exists (0.1ms)[0m   [0;1mSELECT "subcategories".id FROM "subcategories" WHERE ("subcategories"."name" = 'category 1') LIMIT 1[0m
+  [4;35;1mSubcategory Create (0.2ms)[0m   [0mINSERT INTO "subcategories" ("name", "category_id") VALUES('category 1', 1)[0m
+
+
+Processing SpecialItemsController#create (for 0.0.0.0 at 2009-02-09 12:00:22) [POST]
+Rendering template within layouts/application
+Rendering special_items/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/special_items]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "special_items" [0m
+
+
+Processing SpecialItemsController#new (for 0.0.0.0 at 2009-02-09 12:00:22) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/special_items/new]
+
+
+Processing SpecialItemsController#index (for 0.0.0.0 at 2009-02-09 12:00:22) [GET]
+  [4;35;1mSpecialItem Load (0.2ms)[0m   [0mSELECT * FROM "special_items" [0m
+Rendering template within layouts/application
+Rendering special_items/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/special_items]

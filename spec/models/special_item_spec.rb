@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 describe SpecialItem do
   
-  it "should require description" do
+  it "should require name" do
     
     item = SpecialItem.new
     item.should_not be_valid
