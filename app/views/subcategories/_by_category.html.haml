@@ -1,0 +1,2 @@
+= label_tag :special_item_subcategory, "Subcategory:", :class => 'span-22'
+.span-3.append-18= collection_select(:special_item, :subcategory_id, @subcategories, :id, :name, :include_blank => false)
