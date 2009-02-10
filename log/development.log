@@ -5879,3 +5879,468 @@ Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/subcategories/index
   [4;35;1mSQL (2.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090203111859')[0m
   [4;36;1mSQL (1.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090209104816')[0m
   [4;35;1mSQL (2.1ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090209104822')[0m
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-10 10:47:54) [GET]
+Rendering template within layouts/application
+Rendering main/index
+Completed in 26ms (View: 24, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SpecialItemsController#index (for 127.0.0.1 at 2009-02-10 10:47:57) [GET]
+  [4;36;1mSpecialItem Load (1.4ms)[0m   [0;1mSELECT * FROM "special_items" [0m
+Rendering template within layouts/application
+Rendering special_items/index
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/special_items]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:47:59) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSubcategory Load (0.9ms)[0m   [0;1mSELECT * FROM "subcategories" [0m
+Completed in 64ms (View: 58, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2009-02-10 10:48:03) [GET]
+  Parameters: {"category_id"=>"2"}
+  [4;35;1mSubcategory Load (0.4ms)[0m   [0mSELECT * FROM "subcategories" WHERE ("subcategories"."category_id" = '2') [0m
+Rendered subcategories/_by_category (1.1ms)
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/subcategories/index?category_id=2]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:48:25) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mSubcategory Load (0.6ms)[0m   [0mSELECT * FROM "subcategories" [0m
+Completed in 37ms (View: 26, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2009-02-10 10:49:11) [GET]
+  Parameters: {"category_id"=>"2"}
+  [4;36;1mSubcategory Load (0.4ms)[0m   [0;1mSELECT * FROM "subcategories" WHERE ("subcategories"."category_id" = '2') [0m
+Rendered subcategories/_by_category (1.0ms)
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/subcategories/index?category_id=2]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:51:11) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSubcategory Load (0.6ms)[0m   [0;1mSELECT * FROM "subcategories" [0m
+Completed in 26ms (View: 19, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:51:31) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSubcategory Load (0.6ms)[0m   [0;1mSELECT * FROM "subcategories" [0m
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:51:32) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSubcategory Load (0.8ms)[0m   [0;1mSELECT * FROM "subcategories" [0m
+Completed in 89ms (View: 82, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:51:38) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSubcategory Load (0.5ms)[0m   [0;1mSELECT * FROM "subcategories" [0m
+Completed in 28ms (View: 22, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:51:42) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSubcategory Load (0.5ms)[0m   [0;1mSELECT * FROM "subcategories" [0m
+Completed in 26ms (View: 19, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:51:43) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSubcategory Load (0.5ms)[0m   [0;1mSELECT * FROM "subcategories" [0m
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:51:49) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSubcategory Load (0.6ms)[0m   [0;1mSELECT * FROM "subcategories" [0m
+Completed in 90ms (View: 83, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:52:08) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSubcategory Load (0.6ms)[0m   [0;1mSELECT * FROM "subcategories" [0m
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:52:09) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSubcategory Load (0.5ms)[0m   [0;1mSELECT * FROM "subcategories" [0m
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:52:46) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSubcategory Load (0.5ms)[0m   [0;1mSELECT * FROM "subcategories" [0m
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:52:55) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSubcategory Load (0.6ms)[0m   [0;1mSELECT * FROM "subcategories" [0m
+Completed in 88ms (View: 81, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:53:13) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSubcategory Load (0.5ms)[0m   [0;1mSELECT * FROM "subcategories" [0m
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2009-02-10 10:53:16) [GET]
+  Parameters: {"category_id"=>"2"}
+  [4;35;1mSubcategory Load (0.3ms)[0m   [0mSELECT * FROM "subcategories" WHERE ("subcategories"."category_id" = '2') [0m
+Rendered subcategories/_by_category (1.0ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/subcategories/index?category_id=2]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:53:49) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mSubcategory Load (0.5ms)[0m   [0mSELECT * FROM "subcategories" [0m
+Completed in 26ms (View: 19, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:54:01) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mSubcategory Load (0.5ms)[0m   [0mSELECT * FROM "subcategories" [0m
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:54:43) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2009-02-10 10:54:47) [GET]
+  Parameters: {"category_id"=>"2"}
+  [4;35;1mSubcategory Load (0.3ms)[0m   [0mSELECT * FROM "subcategories" WHERE ("subcategories"."category_id" = '2') [0m
+Rendered subcategories/_by_category (1.0ms)
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/subcategories/index?category_id=2]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:54:55) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Completed in 20ms (View: 15, DB: 0) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2009-02-10 10:55:05) [GET]
+  Parameters: {"category_id"=>"2"}
+  [4;35;1mSubcategory Load (0.3ms)[0m   [0mSELECT * FROM "subcategories" WHERE ("subcategories"."category_id" = '2') [0m
+Rendered subcategories/_by_category (1.0ms)
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/subcategories/index?category_id=2]
+
+
+Processing SpecialItemsController#create (for 127.0.0.1 at 2009-02-10 10:55:10) [POST]
+  Parameters: {"commit"=>"Create Special Item", "special_item"=>{"name"=>"", "price"=>"", "category_id"=>"2", "subcategory_id"=>"4"}, "authenticity_token"=>"1055093409ab668d22c213dd9bd38f1d4c1e0a6d"}
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mSubcategory Load (0.2ms)[0m   [0mSELECT * FROM "subcategories" WHERE ("subcategories"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" [0m
+Completed in 105ms (View: 14, DB: 1) | 200 OK [http://localhost/special_items]
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2009-02-10 10:55:14) [GET]
+  Parameters: {"category_id"=>"1"}
+  [4;36;1mSubcategory Load (0.4ms)[0m   [0;1mSELECT * FROM "subcategories" WHERE ("subcategories"."category_id" = '1') [0m
+Rendered subcategories/_by_category (1.0ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/subcategories/index?category_id=1]
+
+
+Processing SpecialItemsController#create (for 127.0.0.1 at 2009-02-10 10:55:20) [POST]
+  Parameters: {"commit"=>"Create Special Item", "special_item"=>{"name"=>"test", "price"=>"", "category_id"=>"1", "subcategory_id"=>"1"}, "authenticity_token"=>"1055093409ab668d22c213dd9bd38f1d4c1e0a6d"}
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mSubcategory Load (0.2ms)[0m   [0;1mSELECT * FROM "subcategories" WHERE ("subcategories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mSpecialItem Create (0.5ms)[0m   [0;1mINSERT INTO "special_items" ("name", "price", "category_id", "subcategory_id") VALUES('test', NULL, 1, 1)[0m
+Redirected to http://localhost:3000/special_items
+Completed in 82ms (DB: 1) | 302 Found [http://localhost/special_items]
+
+
+Processing SpecialItemsController#index (for 127.0.0.1 at 2009-02-10 10:55:20) [GET]
+  [4;35;1mSpecialItem Load (0.5ms)[0m   [0mSELECT * FROM "special_items" [0m
+Rendering template within layouts/application
+Rendering special_items/index
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mSubcategory Load (0.2ms)[0m   [0mSELECT * FROM "subcategories" WHERE ("subcategories"."id" = 1) [0m
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://localhost/special_items]
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2009-02-10 10:55:32) [GET]
+  Parameters: {"category_id"=>"1"}
+  [4;36;1mSubcategory Load (0.3ms)[0m   [0;1mSELECT * FROM "subcategories" WHERE ("subcategories"."category_id" = '1') [0m
+Rendered subcategories/_by_category (1.0ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/subcategories/index?category_id=1]
+
+
+Processing SpecialItemsController#create (for 127.0.0.1 at 2009-02-10 10:55:35) [POST]
+  Parameters: {"commit"=>"Create Special Item", "special_item"=>{"name"=>"", "price"=>"", "category_id"=>"1", "subcategory_id"=>"2"}, "authenticity_token"=>"1055093409ab668d22c213dd9bd38f1d4c1e0a6d"}
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mSubcategory Load (0.2ms)[0m   [0;1mSELECT * FROM "subcategories" WHERE ("subcategories"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Completed in 27ms (View: 10, DB: 1) | 200 OK [http://localhost/special_items]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:56:11) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+Completed in 20ms (View: 15, DB: 0) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:56:20) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:56:28) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSubcategory Load (0.6ms)[0m   [0;1mSELECT * FROM "subcategories" [0m
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2009-02-10 10:56:35) [GET]
+  Parameters: {"category_id"=>"2"}
+  [4;35;1mSubcategory Load (0.3ms)[0m   [0mSELECT * FROM "subcategories" WHERE ("subcategories"."category_id" = '2') [0m
+Rendered subcategories/_by_category (1.1ms)
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/subcategories/index?category_id=2]
+
+
+Processing SpecialItemsController#create (for 127.0.0.1 at 2009-02-10 10:56:37) [POST]
+  Parameters: {"commit"=>"Create Special Item", "special_item"=>{"name"=>"", "price"=>"", "category_id"=>"2", "subcategory_id"=>"4"}, "authenticity_token"=>"1055093409ab668d22c213dd9bd38f1d4c1e0a6d"}
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mSubcategory Load (0.2ms)[0m   [0mSELECT * FROM "subcategories" WHERE ("subcategories"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSubcategory Load (0.5ms)[0m   [0;1mSELECT * FROM "subcategories" [0m
+Completed in 29ms (View: 11, DB: 1) | 200 OK [http://localhost/special_items]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 10:58:46) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSubcategory Load (0.6ms)[0m   [0;1mSELECT * FROM "subcategories" [0m
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2009-02-10 10:58:46) [GET]
+  Parameters: {"category_id"=>"1"}
+  [4;35;1mSubcategory Load (0.4ms)[0m   [0mSELECT * FROM "subcategories" WHERE ("subcategories"."category_id" = '1') [0m
+Rendered subcategories/_by_category (1.2ms)
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://localhost/subcategories/index?category_id=1]
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2009-02-10 10:58:51) [GET]
+  Parameters: {"category_id"=>"2"}
+  [4;36;1mSubcategory Load (0.3ms)[0m   [0;1mSELECT * FROM "subcategories" WHERE ("subcategories"."category_id" = '2') [0m
+Rendered subcategories/_by_category (1.1ms)
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/subcategories/index?category_id=2]
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2009-02-10 10:59:03) [GET]
+  Parameters: {"category_id"=>"1"}
+  [4;35;1mSubcategory Load (0.3ms)[0m   [0mSELECT * FROM "subcategories" WHERE ("subcategories"."category_id" = '1') [0m
+Rendered subcategories/_by_category (1.0ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/subcategories/index?category_id=1]
+
+
+Processing SpecialItemsController#create (for 127.0.0.1 at 2009-02-10 11:00:10) [POST]
+  Parameters: {"commit"=>"Create Special Item", "special_item"=>{"name"=>"test", "price"=>"", "category_id"=>"1", "subcategory_id"=>"1"}, "authenticity_token"=>"1055093409ab668d22c213dd9bd38f1d4c1e0a6d"}
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mSubcategory Load (0.2ms)[0m   [0mSELECT * FROM "subcategories" WHERE ("subcategories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mSpecialItem Create (0.4ms)[0m   [0mINSERT INTO "special_items" ("name", "price", "category_id", "subcategory_id") VALUES('test', NULL, 1, 1)[0m
+Redirected to http://localhost:3000/special_items
+Completed in 21ms (DB: 1) | 302 Found [http://localhost/special_items]
+
+
+Processing SpecialItemsController#index (for 127.0.0.1 at 2009-02-10 11:00:10) [GET]
+  [4;36;1mSpecialItem Load (0.6ms)[0m   [0;1mSELECT * FROM "special_items" [0m
+Rendering template within layouts/application
+Rendering special_items/index
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mSubcategory Load (0.2ms)[0m   [0;1mSELECT * FROM "subcategories" WHERE ("subcategories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "subcategories" WHERE ("subcategories"."id" = 1) [0m
+Completed in 24ms (View: 18, DB: 1) | 200 OK [http://localhost/special_items]
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2009-02-10 11:00:12) [GET]
+  Parameters: {"category_id"=>"1"}
+  [4;35;1mSubcategory Load (0.4ms)[0m   [0mSELECT * FROM "subcategories" WHERE ("subcategories"."category_id" = '1') [0m
+Rendered subcategories/_by_category (1.1ms)
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/subcategories/index?category_id=1]
+
+
+Processing SpecialItemsController#create (for 127.0.0.1 at 2009-02-10 11:00:15) [POST]
+  Parameters: {"commit"=>"Create Special Item", "special_item"=>{"name"=>"test", "price"=>"", "category_id"=>"1", "subcategory_id"=>""}, "authenticity_token"=>"1055093409ab668d22c213dd9bd38f1d4c1e0a6d"}
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSubcategory Load (0.5ms)[0m   [0;1mSELECT * FROM "subcategories" [0m
+Completed in 29ms (View: 14, DB: 1) | 200 OK [http://localhost/special_items]
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2009-02-10 11:00:15) [GET]
+  Parameters: {"category_id"=>"1"}
+  [4;35;1mSubcategory Load (0.3ms)[0m   [0mSELECT * FROM "subcategories" WHERE ("subcategories"."category_id" = '1') [0m
+Rendered subcategories/_by_category (1.2ms)
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/subcategories/index?category_id=1]
+
+
+Processing SpecialItemsController#create (for 127.0.0.1 at 2009-02-10 11:00:16) [POST]
+  Parameters: {"commit"=>"Create Special Item", "special_item"=>{"name"=>"test", "price"=>"", "category_id"=>"1", "subcategory_id"=>""}, "authenticity_token"=>"1055093409ab668d22c213dd9bd38f1d4c1e0a6d"}
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSubcategory Load (0.5ms)[0m   [0;1mSELECT * FROM "subcategories" [0m
+Completed in 91ms (View: 77, DB: 1) | 200 OK [http://localhost/special_items]
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2009-02-10 11:00:16) [GET]
+  Parameters: {"category_id"=>"1"}
+  [4;35;1mSubcategory Load (0.9ms)[0m   [0mSELECT * FROM "subcategories" WHERE ("subcategories"."category_id" = '1') [0m
+Rendered subcategories/_by_category (2.0ms)
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/subcategories/index?category_id=1]
+
+
+Processing SpecialItemsController#create (for 127.0.0.1 at 2009-02-10 11:00:24) [POST]
+  Parameters: {"commit"=>"Create Special Item", "special_item"=>{"name"=>"test", "price"=>"", "category_id"=>"1", "subcategory_id"=>"2"}, "authenticity_token"=>"1055093409ab668d22c213dd9bd38f1d4c1e0a6d"}
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mSubcategory Load (0.2ms)[0m   [0mSELECT * FROM "subcategories" WHERE ("subcategories"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mSpecialItem Create (0.3ms)[0m   [0mINSERT INTO "special_items" ("name", "price", "category_id", "subcategory_id") VALUES('test', NULL, 1, 2)[0m
+Redirected to http://localhost:3000/special_items
+Completed in 20ms (DB: 1) | 302 Found [http://localhost/special_items]
+
+
+Processing SpecialItemsController#index (for 127.0.0.1 at 2009-02-10 11:00:24) [GET]
+  [4;36;1mSpecialItem Load (0.7ms)[0m   [0;1mSELECT * FROM "special_items" [0m
+Rendering template within layouts/application
+Rendering special_items/index
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mSubcategory Load (0.2ms)[0m   [0;1mSELECT * FROM "subcategories" WHERE ("subcategories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "subcategories" WHERE ("subcategories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mSubcategory Load (0.2ms)[0m   [0;1mSELECT * FROM "subcategories" WHERE ("subcategories"."id" = 2) [0m
+Completed in 24ms (View: 19, DB: 1) | 200 OK [http://localhost/special_items]
+
+
+Processing SpecialItemsController#index (for 127.0.0.1 at 2009-02-10 11:00:57) [GET]
+  [4;35;1mSpecialItem Load (0.6ms)[0m   [0mSELECT * FROM "special_items" [0m
+Rendering template within layouts/application
+Rendering special_items/index
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mSubcategory Load (0.2ms)[0m   [0mSELECT * FROM "subcategories" WHERE ("subcategories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "subcategories" WHERE ("subcategories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mSubcategory Load (0.2ms)[0m   [0mSELECT * FROM "subcategories" WHERE ("subcategories"."id" = 2) [0m
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/special_items]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 11:00:59) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mSubcategory Load (0.5ms)[0m   [0mSELECT * FROM "subcategories" [0m
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2009-02-10 11:00:59) [GET]
+  Parameters: {"category_id"=>"1"}
+  [4;36;1mSubcategory Load (0.4ms)[0m   [0;1mSELECT * FROM "subcategories" WHERE ("subcategories"."category_id" = '1') [0m
+Rendered subcategories/_by_category (1.5ms)
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/subcategories/index?category_id=1]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 11:01:27) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSubcategory Load (0.5ms)[0m   [0;1mSELECT * FROM "subcategories" [0m
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2009-02-10 11:01:27) [GET]
+  Parameters: {"category_id"=>"1"}
+  [4;35;1mSubcategory Load (0.4ms)[0m   [0mSELECT * FROM "subcategories" WHERE ("subcategories"."category_id" = '1') [0m
+Rendered subcategories/_by_category (1.5ms)
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/subcategories/index?category_id=1]
+
+
+Processing SpecialItemsController#new (for 127.0.0.1 at 2009-02-10 11:01:40) [GET]
+Rendering template within layouts/application
+Rendering special_items/new
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mSubcategory Load (0.5ms)[0m   [0mSELECT * FROM "subcategories" [0m
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/special_items/new]
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2009-02-10 11:01:40) [GET]
+  Parameters: {"category_id"=>"1"}
+  [4;36;1mSubcategory Load (0.3ms)[0m   [0;1mSELECT * FROM "subcategories" WHERE ("subcategories"."category_id" = '1') [0m
+Rendered subcategories/_by_category (1.2ms)
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/subcategories/index?category_id=1]
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2009-02-10 11:01:45) [GET]
+  Parameters: {"category_id"=>"2"}
+  [4;35;1mSubcategory Load (0.3ms)[0m   [0mSELECT * FROM "subcategories" WHERE ("subcategories"."category_id" = '2') [0m
+Rendered subcategories/_by_category (1.2ms)
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/subcategories/index?category_id=2]
