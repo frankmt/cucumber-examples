@@ -1,0 +1,24 @@
+- content_for :content do
+  %h1 Special Items
+  
+  .prepend-19.span-3
+    = link_to ("New Special Item", new_special_item_url)
+    
+  .span-21
+    %table
+      %tr
+        %th Name
+        %th Category
+        %th Subcategory
+        %th Price
+        %th 
+      - for special_item in @special_items
+        %tr
+          %td= special_item.name
+          %td= special_item.category.name
+          %td= special_item.subcategory.name
+          %td= special_item.price
+          %td
+            - form_tag special_item_path(special_item), :method => :delete do
+              = image_submit_tag "/images/cancel.png", :alt => "Remove Item", :confirm => "Are you sure?"
+          
