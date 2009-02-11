@@ -4,5 +4,5 @@ Given(/a "(.*)" exists with \{(.*)\}$/) do |entity, fields|
 end
 
 Given(/^I am in the new "(.*)" page$/) do |resource_name|
-  visits "/#{resource_name}/new"
+  visit "/#{resource_name}/new"
 end

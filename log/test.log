@@ -7938,3 +7938,1027 @@ Processing ItemsController#index (for 127.0.0.1 at 2009-02-10 15:36:59) [GET]
 Rendering template within layouts/application
 Rendering items/index
 Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/items]
+  [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+  [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+  [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+  [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+  [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+  [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+  [4;36;1mItem Create (0.5ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-10 16:14:43) [GET]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-10 16:14:43) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-10 16:14:43) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-10 16:14:44) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}}
+Rendering template within layouts/application
+Rendering items/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-10 16:14:44) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-10 16:14:44) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}}
+  [4;35;1mItem Create (0.5ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+Redirected to http://www.example.com/items
+Completed in 3ms (DB: 0) | 302 Found [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-10 16:14:44) [GET]
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://www.example.com/items]
+  [4;35;1mItem Create (0.3ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-10 16:14:44) [GET]
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-10 16:19:42) [GET]
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-10 16:19:42) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-10 16:19:42) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-10 16:19:42) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}}
+Rendering template within layouts/application
+Rendering items/new
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-10 16:19:42) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-10 16:19:42) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}}
+  [4;35;1mItem Create (0.5ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+Redirected to http://www.example.com/items
+Completed in 3ms (DB: 1) | 302 Found [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-10 16:19:42) [GET]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://www.example.com/items]
+  [4;35;1mItem Create (0.4ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-10 16:19:42) [GET]
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-10 16:57:36) [GET]
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-10 16:57:36) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-10 16:57:36) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-10 16:57:36) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}}
+Rendering template within layouts/application
+Rendering items/new
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-10 16:57:36) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-10 16:57:36) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}}
+  [4;35;1mItem Create (0.4ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+Redirected to http://www.example.com/items
+Completed in 7ms (DB: 0) | 302 Found [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-10 16:57:36) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://www.example.com/items]
+  [4;35;1mItem Create (0.4ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;36;1mItem Create (0.5ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-10 16:57:36) [GET]
+  [4;35;1mItem Load (0.9ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 10ms (View: 6, DB: 2) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-10 16:58:14) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-10 16:58:14) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-10 16:58:14) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-10 16:58:14) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}}
+Rendering template within layouts/application
+Rendering items/new
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-10 16:58:14) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-10 16:58:14) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}}
+  [4;35;1mItem Create (0.5ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+Redirected to http://www.example.com/items
+Completed in 4ms (DB: 1) | 302 Found [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-10 16:58:14) [GET]
+  [4;36;1mItem Load (0.6ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://www.example.com/items]
+  [4;35;1mItem Create (0.5ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-10 16:58:14) [GET]
+  [4;35;1mItem Load (1.1ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 10ms (View: 7, DB: 2) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-10 17:07:44) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-10 17:07:44) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-10 17:07:44) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-10 17:07:44) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}}
+Rendering template within layouts/application
+Rendering items/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-10 17:07:44) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-10 17:07:44) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}}
+  [4;35;1mItem Create (0.5ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+Redirected to http://www.example.com/items
+Completed in 3ms (DB: 1) | 302 Found [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-10 17:07:44) [GET]
+  [4;36;1mItem Load (0.6ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://www.example.com/items]
+  [4;35;1mItem Create (0.5ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-10 17:07:44) [GET]
+  [4;35;1mItem Load (1.0ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 10ms (View: 7, DB: 2) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-10 17:08:02) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-10 17:08:02) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-10 17:08:02) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-10 17:08:02) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}}
+Rendering template within layouts/application
+Rendering items/new
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-10 17:08:02) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-10 17:08:02) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}}
+  [4;35;1mItem Create (0.5ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+Redirected to http://www.example.com/items
+Completed in 3ms (DB: 1) | 302 Found [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-10 17:08:02) [GET]
+  [4;36;1mItem Load (0.6ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://www.example.com/items]
+  [4;35;1mItem Create (0.5ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-10 17:08:02) [GET]
+  [4;35;1mItem Load (1.1ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 10ms (View: 7, DB: 2) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 10:57:48) [GET]
+  [4;36;1mItem Load (1.2ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 10:57:48) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 10:57:48) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-11 10:57:48) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}}
+Rendering template within layouts/application
+Rendering items/new
+Completed in 75ms (View: 5, DB: 0) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 10:57:48) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-11 10:57:48) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}}
+  [4;35;1mItem Create (0.5ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+Redirected to http://www.example.com/items
+Completed in 3ms (DB: 1) | 302 Found [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 10:57:48) [GET]
+  [4;36;1mItem Load (0.6ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 7ms (View: 6, DB: 1) | 200 OK [http://www.example.com/items]
+  [4;35;1mItem Create (0.4ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 10:57:48) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 10:58:04) [GET]
+  [4;36;1mItem Load (0.7ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 10:58:04) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 10:58:04) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-11 10:58:04) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}}
+Rendering template within layouts/application
+Rendering items/new
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 10:58:04) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-11 10:58:04) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}}
+  [4;35;1mItem Create (0.5ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+Redirected to http://www.example.com/items
+Completed in 3ms (DB: 0) | 302 Found [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 10:58:04) [GET]
+  [4;36;1mItem Load (0.6ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://www.example.com/items]
+  [4;35;1mItem Create (0.5ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 10:58:04) [GET]
+  [4;35;1mItem Load (1.1ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 10ms (View: 6, DB: 2) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 10:59:59) [GET]
+  [4;36;1mItem Load (0.9ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 10:59:59) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 10:59:59) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-11 10:59:59) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}}
+Rendering template within layouts/application
+Rendering items/new
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 10:59:59) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-11 10:59:59) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}}
+  [4;35;1mItem Create (0.7ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+Redirected to http://www.example.com/items
+Completed in 4ms (DB: 1) | 302 Found [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 10:59:59) [GET]
+  [4;36;1mItem Load (0.6ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://www.example.com/items]
+  [4;35;1mItem Create (0.4ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 10:59:59) [GET]
+  [4;35;1mItem Load (0.7ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://www.example.com/items]
+  [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 11:06:26) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 11:06:26) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 11:06:26) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-11 11:06:26) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}}
+Rendering template within layouts/application
+Rendering items/new
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 11:06:26) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-11 11:06:26) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}}
+  [4;35;1mItem Create (0.5ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+Redirected to http://www.example.com/items
+Completed in 4ms (DB: 1) | 302 Found [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 11:06:26) [GET]
+  [4;36;1mItem Load (0.6ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://www.example.com/items]
+  [4;35;1mItem Create (0.6ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 11:06:26) [GET]
+  [4;35;1mItem Load (0.9ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 9ms (View: 7, DB: 2) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 11:06:39) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 11:06:39) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 11:06:39) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-11 11:06:39) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}}
+Rendering template within layouts/application
+Rendering items/new
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 11:06:39) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-11 11:06:39) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}}
+  [4;35;1mItem Create (0.5ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+Redirected to http://www.example.com/items
+Completed in 4ms (DB: 1) | 302 Found [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 11:06:39) [GET]
+  [4;36;1mItem Load (0.6ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://www.example.com/items]
+  [4;35;1mItem Create (0.5ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 11:06:39) [GET]
+  [4;35;1mItem Load (1.5ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 11ms (View: 7, DB: 2) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 11:59:49) [GET]
+  [4;36;1mItem Load (0.9ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 11:59:49) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 11:59:49) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-11 11:59:49) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}}
+Rendering template within layouts/application
+Rendering items/new
+Completed in 66ms (View: 5, DB: 0) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 11:59:49) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-11 11:59:49) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}}
+  [4;35;1mItem Create (0.5ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+Redirected to http://www.example.com/items
+Completed in 4ms (DB: 1) | 302 Found [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 11:59:49) [GET]
+  [4;36;1mItem Load (0.7ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://www.example.com/items]
+  [4;35;1mItem Create (0.7ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 11:59:49) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 8ms (View: 6, DB: 2) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 12:00:04) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 12:00:04) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 12:00:04) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-11 12:00:04) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}}
+Rendering template within layouts/application
+Rendering items/new
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 12:00:04) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-11 12:00:04) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}}
+  [4;35;1mItem Create (0.5ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+Redirected to http://www.example.com/items
+Completed in 3ms (DB: 1) | 302 Found [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 12:00:04) [GET]
+  [4;36;1mItem Load (0.6ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://www.example.com/items]
+  [4;35;1mItem Create (0.6ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 12:00:04) [GET]
+  [4;35;1mItem Load (1.0ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 9ms (View: 6, DB: 2) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 12:00:25) [GET]
+  [4;36;1mItem Load (0.7ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 12:00:25) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 12:00:25) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-11 12:00:25) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}}
+Rendering template within layouts/application
+Rendering items/new
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 12:00:25) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-11 12:00:25) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}}
+  [4;35;1mItem Create (0.5ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+Redirected to http://www.example.com/items
+Completed in 4ms (DB: 1) | 302 Found [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 12:00:25) [GET]
+  [4;36;1mItem Load (0.6ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://www.example.com/items]
+  [4;35;1mItem Create (0.6ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 12:00:25) [GET]
+  [4;35;1mItem Load (1.0ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 9ms (View: 6, DB: 2) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 12:01:28) [GET]
+  [4;36;1mItem Load (0.9ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 12:01:28) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 12:01:28) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-11 12:01:28) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}}
+Rendering template within layouts/application
+Rendering items/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 12:01:28) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-11 12:01:28) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}}
+  [4;35;1mItem Create (0.6ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+Redirected to http://www.example.com/items
+Completed in 4ms (DB: 1) | 302 Found [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 12:01:28) [GET]
+  [4;36;1mItem Load (0.6ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 9ms (View: 6, DB: 1) | 200 OK [http://www.example.com/items]
+  [4;35;1mItem Create (0.5ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 12:01:28) [GET]
+  [4;35;1mItem Load (1.1ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 12ms (View: 9, DB: 2) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 12:25:51) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 12:25:51) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 12:25:51) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-11 12:25:51) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"", "price"=>"", "description"=>""}}
+Rendering template within layouts/application
+Rendering items/new
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://www.example.com/items]
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {}
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-02-11 12:25:51) [GET]
+Rendering template within layouts/application
+Rendering items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/items/new]
+REQUESTING PAGE: POST /items with {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-02-11 12:25:51) [POST]
+  Parameters: {"commit"=>"Create Item", "item"=>{"name"=>"my item", "price"=>"1.5", "description"=>"my description"}}
+  [4;35;1mItem Create (93.4ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+Redirected to http://www.example.com/items
+Completed in 97ms (DB: 93) | 302 Found [http://www.example.com/items]
+REQUESTING PAGE: GET http://www.example.com/items with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 12:25:51) [GET]
+  [4;36;1mItem Load (0.9ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 9ms (View: 6, DB: 1) | 200 OK [http://www.example.com/items]
+  [4;35;1mItem Create (0.6ms)[0m   [0mINSERT INTO "items" ("name", "price", "description") VALUES('my item', 1.5, 'my description')[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "description") VALUES('my second item', 3.0, 'my second description')[0m
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-02-11 12:25:51) [GET]
+  [4;35;1mItem Load (0.9ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/application
+Rendering items/index
+Completed in 9ms (View: 7, DB: 2) | 200 OK [http://www.example.com/items]

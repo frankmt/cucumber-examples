@@ -1,29 +1,41 @@
-require File.expand_path(File.dirname(__FILE__) + '/env.rb')
+# require File.expand_path(File.dirname(__FILE__) + '/env.rb')
+# require 'webrat/selenium'
+#  
+# World do
+#   Webrat::Selenium::Rails::World.new
+# end
+#  
+# def empty_database
+#   $selenium.open("http://localhost:3000/factories/destroy_all")
+# end
+#  
+# Before do
+#   empty_database
+#   selenium.delete_all_visible_cookies
+#   ActionMailer::Base.deliveries = []
+# end
+#  
+# at_exit do
+#   empty_database
+# end
 
-require File.join(File.dirname(__FILE__), "../selenium_steps/support/selenium")
-require File.join(File.dirname(__FILE__), "/../../lib/selenium_server")
-require File.join(File.dirname(__FILE__), "../selenium_steps/support/selenium_driver_extensions")
- 
-SeleniumServer.start
- 
-remote_control_server = ENV['SELENIUM_REMOTE_CONTROL'] || "localhost"
-port = ENV['SELENIUM_PORT'] || 4444
-browser = ENV['SELENIUM_BROWSER'] || "*firefox"
-application_host = ENV['SELENIUM_APPLICATION_HOST'] || "localhost"
-application_port = ENV['SELENIUM_APPLICATION_PORT'] || "3001"
-timeout = 60000
-puts "Contacting Selenium RC on #{remote_control_server}:#{port} -> http://#{application_host}:#{application_port}"
-$selenium = Selenium::SeleniumDriver.new(remote_control_server, port, browser, "http://#{application_host}:#{application_port}", timeout)
-$selenium.extend SeleniumDriverExtensions
-$selenium.start
- 
-ENV["HOST"] = "http://#{application_host}:#{application_port}"
- 
-Before do
-  $selenium.open(ENV['HOST'] + "/factories/destroy_all")
+ENV["RAILS_ENV"] = "test" 
+require File.expand_path(File.dirname(__FILE__) + '/../../config/environment')
+require 'cucumber/rails/world'
+require 'cucumber/formatters/unicode'
+require 'webrat/rails'
+require 'cucumber/rails/rspec'
+
+Cucumber::Rails.use_transactional_fixtures
+
+Webrat.configure do |config|
+  config.mode = :selenium
 end
- 
-at_exit do
-  $selenium.stop  
-  SeleniumServer.stop
+
+def empty_database
+  # open("http://localhost:3000/factories/destroy_all")
+end
+
+Before do
+  empty_database
 end
