@@ -4,12 +4,14 @@ end
 
 When /^I press "(.*)" and confirm my option$/ do |button|
   $selenium.choose_ok_on_next_confirmation
-  $selenium.click("css=input[value='#{button}']")
+  $selenium.click_and_wait("css=input[value='#{button}']")
+  $selenium.get_confirmation.should == 'Are you sure?'
 end
 
 When /^I press "(.*)" and do not confirm my option$/ do |button|
   $selenium.choose_cancel_on_next_confirmation
   $selenium.click("css=input[value='#{button}']")
+  $selenium.get_confirmation.should == 'Are you sure?'
 end
 
 When /^I follow "(.*)"$/ do |link|
@@ -27,3 +29,4 @@ end
 Then /^I should not see "(.*)"$/ do |text|
   assert(!$selenium.get_body_text.include?(text))
 end
+

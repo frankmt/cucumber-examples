@@ -29,13 +29,6 @@ Scenario: Items are correctly displayed in the home page
   | my item         | my description        | 1.5 |
   | my second item  | my second description | 3.0 |
 
-Scenario: Delete an item
-  Given an item exists with {'name' => 'my item', 'description' => 'my description', 'price' => '1.5'}
-  When I navigate to the home page
-  And I press "remove_item" and confirm my option
-  Then the "items-list" should look like
-  | Name            | Description           | Price |
-
 Scenario: Delete an item but cancel on confirmation
   Given an item exists with {'name' => 'my item', 'description' => 'my description', 'price' => '1.5'}
   When I navigate to the home page
@@ -43,3 +36,11 @@ Scenario: Delete an item but cancel on confirmation
   Then the "items-list" should look like
   | Name            | Description           | Price |
   | my item         | my description        | 1.5   |
+
+Scenario: Delete an item
+  Given an item exists with {'name' => 'my item', 'description' => 'my description', 'price' => '1.5'}
+  When I navigate to the home page
+  And I press "remove_item" and confirm my option
+  Then the "items-list" should look like
+  | Name            | Description           | Price |
+

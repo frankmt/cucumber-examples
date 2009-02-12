@@ -5,6 +5,10 @@ end
 Then(/^the new "(.*)" page should be displayed$/) do |resource|
   $selenium.get_location =~ /\/#{resource}\/new$/
 end
+
+Then(/^I should see error "(.*)" on name field$/) do |error|
+  $selenium.get_text("//label[@for = 'special_item_name']/../..//div[@class='formError']").should == error
+end
  
 Then(/^the "(.*)" should look like$/) do |table_id, definition_table|
   column_headers = []

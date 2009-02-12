@@ -83,5 +83,19 @@ module SeleniumDriverExtensions
     
     wait_for_condition script, time
   end
+  
+  def wait_for_dropdown_value_in_correct_position(value, position, time=5000)
+    script = <<-EOS
+    var element;
+    try {
+      element = selenium.browserbot.findElement("#{position}").innerHTML;
+    } catch(e) {
+      element = null;
+    }
+    element == '#{value}';
+    EOS
+
+    wait_for_condition script, time
+  end
 
 end
